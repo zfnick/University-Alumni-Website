@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Alumni Portal</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="stylesheet" href="css/login.css" type="text/css"/>
+		<link rel="stylesheet" href="css/all.css" type="text/css"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+		<link rel="icon" href="img/QIU-logo-solo.png">
+	</head>
+		
+	<body>
+  	<div class="container">
+    	<div class="row">
+      	<div class="col-sm-10 col-md-7 col-lg-5 mx-auto">
+        	<div class="card card-signin my-5">
+						<img src="img/QIU-Logo-new.png" alt="qiu" class="center">
+            <h3>Alumni Portal</h3>
+            <div class="card-body">
+
+              <form name="portal" action="#" method="post" onsubmit="return validate()">
+                <label for="role">Log In As:</label>
+                <select name="role" id="role">
+                  <option value="admin">Admin</option>
+                  <option value="student">Student</option>
+                </select>
+
+                <div class="form-label-group">
+                  <input type="email" id="inputEmail" name="Email" class="form-control" placeholder="Email address" autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="password" id="inputPassword" name="pass" class="form-control" placeholder="Password" >
+                  <label for="inputPassword">Password</label>
+                </div>
+
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1" checked>
+                  <label class="custom-control-label" for="customCheck1" >Remember password</label>
+                </div>
+
+                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Log in</button>
+                <p>New User? <a href="signup.html" target="_blank">Sign Up Here</a></p>
+              </form>
+            </div>
+        	</div>
+        </div>
+    	</div>
+  	</div>
+    <script>
+        function validate() {
+            var Email = document.portal.Email;
+            var pass = document.portal.pass;
+
+
+            if(ValidateEmail(Email)) {
+                if(pass_validation(pass)) {
+                }
+            }
+            return false;
+        }
+
+        function ValidateEmail(Email) {
+            var maiformat = /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,3})+$/;
+            if (Email.value.match(maiformat)) {
+                return true;
+            }
+            else {
+                alert("Invalid email address !");
+                Email.focus();
+                return false;
+            }
+        }
+        function pass_validation(pass)
+        {
+            var pass_len = pass.value.length;
+            if (pass_len === 0 ) {
+                alert("Invalid Password !")
+                pass.focus();
+                return false;
+            }
+            else
+            {
+                alert('Succesfully Logged In');
+                window.location.reload()
+                return true;
+            }
+        }
+    </script>
+	</body>
+</html>

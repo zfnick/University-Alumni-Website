@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>Update Form</title>
+		<link rel="icon" href="img/QIU-logo-solo.png">
+
+		<style>
+        .container h1, p{
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Full-width input fields */
+        input[type=text], input[type=password], input[type=tel], input[type=date] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            border-radius: 10px;
+            background: #f1f1f1;
+        }
+
+        /* Add a background color when the inputs get focus */
+        input[type=text]:focus, input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        button:hover {
+            opacity:1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn, .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Style the horizontal ruler */
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+		</style>
+
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Update Form</h1>
+			<p>Please fill in this form to update your personal details.</p>
+			<hr>
+
+			<form name="updateform" method="post" action="#">
+				<label for="FullName"><b>Full Name*</b></label>
+				<input type="text" placeholder="Enter Name" name="FullName" id="FullName" required autofocus>
+
+				<label for="Email"><b>Email*</b></label>
+				<input type="email" placeholder="Enter Email" name="Email" id="Email" required>
+
+				<label for="PhoneNumber"><b>Phone No.*</b></label>
+				<input type="tel" placeholder="eg: +6012-345-6789" name="PhoneNumber" id="PhoneNumber" required>
+
+				<label for="Address"><b>Home Address</b></label>
+				<input type="text" placeholder="Enter Address" name="Address" id="Address" >
+
+				<label for="Graduation Year"><b>Graduation Year*</b></label>
+				<input type="date" placeholder="Enter Graduation Year" name="Graduation Year" id="Graduation Year" required>
+
+				<label for="Course of Study"><b>Course of Study*</b></label>
+				<input type="text" placeholder="Enter Course of Study" name="Course of Study" id="Course of Study" required>
+
+				<label for="University Name"><b>University Name*</b></label>
+				<input type="text" placeholder="Enter University Name" name="University Name" id="University Name" required>
+
+				<label for="Occupation"><b>Occupation*</b></label>
+				<input type="text" placeholder="Enter Occupation" name="Occupation" id="Occupation" required>
+
+				<label for="Workplace Name"><b>Workplace Name</b></label>
+				<input type="text" placeholder="Enter Workplace Name" name="Workplace Name" id="Workplace Name">
+
+				<label for="Workplace Address"><b>Workplace Address</b></label>
+				<input type="text" placeholder="Enter Workplace Address" name="Workplace Address" id="Workplace Address">
+
+				<label for="remember">
+					<input type="checkbox" checked="checked" name="remember" id="remember" style="margin-bottom:15px"> Remember me
+				</label>
+
+				<p>By submitting your details you agree to our <a href="#" onclick="window.open('terms.html');
+	      window.open('policy.html');" style="color:dodgerblue" >Terms & Privacy</a>.</p>
+
+				<div class="clearfix">
+					<button type="reset" class="cancelbtn">Cancel</button>
+					<button type="submit" class="signupbtn">Submit</button>
+				</div>
+			</form>
+		</div>
+
+	</body>
+</html>
